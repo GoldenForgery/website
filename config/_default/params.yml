@@ -1,0 +1,58 @@
+# Site identity
+author: Golden Forgery
+description: "A fanmade expansion for Umineko Golden Fantasia."
+subtitle:
+  text: "A fanmade expansion for Umineko Golden Fantasia."
+
+# Home page lists posts from content/posts/ (not the theme's default content/post/)
+mainSections: ["posts"]
+
+# Main menu / sidebar nav.
+# The label for each entry is looked up via i18n (`{{ i18n .name }}`), so any
+# name added here must have a matching key in i18n/<lang>.yml — see
+# i18n/en.yml in this project for the "install" key.
+menu:
+  - name: home
+    url: ""
+    icon:
+  - name: install
+    url: "install"
+    icon:
+  - name: archives
+    url: "archives"
+    icon:
+
+# Banner and avatar — placeholders. Replace by dropping files in assets/images/
+# (banner) and static/avatar/ (avatar), or update the paths below.
+banner:
+avatar:
+
+# Sidebar position and behavior
+sidebar:
+  position: right
+  menu: true
+  article:
+    show_common: true
+
+# Disable widgets for now — the home is news/patch notes, sidebar carries the Install CTA.
+widgets: []
+
+# Footer
+footer:
+  since: 2026
+  powered: true
+  count: false
+  busuanzi: false
+
+# Light/dark — follow system
+dark_mode:
+  enable: auto
+
+# Disable preloader / firework / cursor for a snappier first cut.
+# Re-enable any of these once we have the real theme assets and design.
+preloader:
+  enable: false
+firework:
+  enable: false
+reimu_cursor:
+  enable: false
