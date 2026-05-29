@@ -8,28 +8,48 @@ subtitle:
 mainSections: ["posts"]
 
 # Main menu / sidebar nav.
-# The label for each entry is looked up via i18n (`{{ i18n .name }}`), so any
-# name added here must have a matching key in i18n/<lang>.yml — see
-# i18n/en.yml in this project for the "install" key.
+# Labels are looked up via i18n (`{{ i18n .name }}`) — see i18n/en.yml for the
+# "install" key.
+# Icons are FontAwesome 7 Free glyphs given as hex codepoints (no leading "\u"
+# or "&#x"). The theme renders them as `&#x<hex>;` inside an element whose
+# font-family is FontAwesome; we force font-weight: 900 (Solid) via
+# static/css/custom.css so any FA Solid glyph works here.
+#   f52d = feather  (quill — Umineko's red/blue text)
+#   f518 = book-open (the witches' game text)
+#   f70e = scroll   (records / archives)
 menu:
   - name: home
     url: ""
-    icon:
+    icon: f52d
   - name: install
     url: "install"
-    icon:
+    icon: f518
   - name: archives
     url: "archives"
-    icon:
+    icon: f70e
 
-# Banner and avatar — placeholders. Replace by dropping files in assets/images/
-# (banner) and static/avatar/ (avatar), or update the paths below.
-banner:
+# Disable the iconfont.cn glyph set the theme uses by default; we want
+# FontAwesome (which the theme loads alongside). MUST be the literal `false`
+# (not empty) — main.scss interpolates this value directly, and an empty
+# value produces invalid SCSS. With FA active, any menu entry without an
+# explicit `icon:` falls back to FA glyph f6ad, so set an icon on every entry.
+icon_font: false
+
+# Banner. Accepts a local path (resolved from /static/), a full URL, or an
+# `rgb(...)` literal for a flat color. The theme applies a fade-to-transparent
+# gradient mask over the image, so the bottom of the image fades into the
+# page background regardless of source.
+# Vendored from https://static.wikia.nocookie.net/umineko/images/b/b0/Mhal_2c.png
+# (Wikia serves WebP despite the .png URL — file is genuinely WebP).
+banner: "images/banner.webp"
+
+# Avatar — left blank; the sidebar avatar block has been removed in the
+# custom layouts/partials/sidebar/commonBar.html override, so this is unused.
 avatar:
 
 # Sidebar position and behavior
 sidebar:
-  position: right
+  position: left
   menu: true
   article:
     show_common: true
@@ -38,11 +58,26 @@ sidebar:
 widgets: []
 
 # Footer
+# `icon.url` is resolved relative to the built css/main.css, so it needs to
+# climb one level (`../`) to reach the site's /images/ folder.
 footer:
   since: 2026
   powered: true
   count: false
   busuanzi: false
+  icon:
+    url: "../images/butterfly.svg"
+    rotate: false
+    mask: false  # false = show the SVG's own gold; true tints it with --red-1
+
+# Back-to-top button
+top:
+  enable: true
+  position: right
+  icon:
+    url: "../images/butterfly.svg"
+    rotate: false
+    mask: false
 
 # Light/dark — follow system
 dark_mode:
@@ -56,3 +91,20 @@ firework:
   enable: false
 reimu_cursor:
   enable: false
+
+# Turn off the theme's fade-up / zoom-in entry animations (AOS library).
+# When disabled, the theme also skips loading AOS from the CDN.
+animation:
+  enable: false
+
+# Load our project-level stylesheet + SVG favicon via the theme's head
+# injector. head_end runs at the end of <head>, AFTER the theme's main.css,
+# so our rules win the cascade.
+# Preloading the banner here (as=image) tells the browser to fetch it
+# during head parsing, before it ever sees the <img> tag in the body —
+# stops the noticeable "blink in" on page navigation.
+injector:
+  head_end: |
+    <link rel="icon" type="image/svg+xml" href="/images/butterfly.svg">
+    <link rel="preload" as="image" href="/images/banner.webp" type="image/webp" fetchpriority="high">
+    <link rel="stylesheet" href="/css/custom.css">

@@ -8,3 +8,4 @@ theme = 'reimu'
   [module.hugoVersion]
     extended = true
     min = '0.158.0'
+

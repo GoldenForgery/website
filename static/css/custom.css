@@ -1,0 +1,116 @@
+/*
+ * Project-level theme tweaks layered on top of hugo-theme-reimu.
+ * Loaded via injector.head_end in config/_default/params.yml.
+ *
+ * Goal: take the Touhou-flavored reimu defaults and nudge them toward
+ * Umineko Golden Fantasia — golden butterfly accents alongside the
+ * theme's existing crimson reds.
+ */
+
+/* ---------- Banner ---------- */
+/* The theme sets `transition: 0.3s` (no property) on the header banner img,
+ * so any style change — including media-query height swaps and the brief
+ * window between paint and image-decoded — can animate visibly. Disable
+ * the transition so the banner just appears, no fade. */
+#header img {
+  transition: none;
+}
+
+/* ---------- Palette ---------- */
+:root {
+  --gold-0: #fff4c4;
+  --gold-1: #f3d36b;
+  --gold-2: #d4af37;
+  --gold-3: #a8841e;
+  --gold-4: #6e530e;
+  --gold-shadow: rgba(212, 175, 55, 0.35);
+}
+
+html[data-theme="dark"] {
+  --gold-1: #f4d77a;
+  --gold-2: #e6c050;
+  --gold-3: #b48f2a;
+  --gold-shadow: rgba(244, 215, 122, 0.25);
+}
+
+/* ---------- Link / accent treatment ---------- */
+/* Switch the article link accent from pure red to a warmer gold-on-red
+ * combo. Hover lifts to the brighter gold. */
+.article-entry a:not(.btn):not(.sidebar-menu-link-dummy):hover,
+.article-content a:not(.btn):hover {
+  color: var(--gold-3);
+}
+
+/* ---------- Sidebar menu icons ---------- */
+/* The theme renders menu icon glyphs at font-weight: 400 (FA Regular),
+ * but most of the Umineko-friendly icons (feather, scroll, book-open)
+ * only ship in FA Free as font-weight: 900 (Solid). Bump the weight so
+ * our chosen glyphs render correctly in both the sidebar and the
+ * top nav. */
+.sidebar-menu-icon,
+.main-nav-icon {
+  font-weight: 900;
+}
+
+/* Subtle gold tint on hover for menu icons, replacing the pure-red
+ * hover of the upstream theme. */
+.sidebar-menu-link-wrap:hover .sidebar-menu-icon,
+.main-nav-link-wrap:hover .main-nav-icon {
+  color: var(--gold-2);
+}
+
+/* ---------- Header text readability ---------- */
+/* The banner image fills the header behind the title and subtitle. Two
+ * layered defenses:
+ *   1. A soft dark band centered on where the title sits, fading to
+ *      transparent at both the top and bottom of #header — no hard
+ *      edges. Covers the whole header so it can't leave a horizontal
+ *      cut-off line at the bottom edge.
+ *   2. Stacked text-shadow on the title and subtitle: a tight dark
+ *      shadow for legibility, then a soft gold halo for theme. */
+#header::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 20%,
+    rgba(0, 0, 0, 0.4) 50%,
+    transparent 80%
+  );
+  pointer-events: none;
+  z-index: -1;
+}
+
+#logo h1,
+#subtitle {
+  color: #fff;
+  text-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.9),
+    0 2px 10px rgba(0, 0, 0, 0.7),
+    0 0 22px var(--gold-shadow);
+}
+
+/* ---------- Footer scrolling band ---------- */
+/* The upstream theme has a `.footer-line` that scrolls a horizontal row
+ * of red dashes across the bottom of every page. Hide it entirely — too
+ * busy for this site. */
+.footer-line {
+  display: none;
+}
+
+/* ---------- Alert blockquote (warning) ---------- */
+/* The placeholder warning on the install page uses the theme's
+ * alertBlockquote shortcode. Re-skin its "warning" variant to feel
+ * like an aged parchment note rather than a generic yellow banner. */
+.alert-blockquote.warning {
+  background: linear-gradient(to right, #fdf6dc, #fbeec1);
+  border-left: 4px solid var(--gold-2);
+  color: var(--gold-4);
+}
+
+html[data-theme="dark"] .alert-blockquote.warning {
+  background: linear-gradient(to right, rgba(110, 83, 14, 0.15), rgba(168, 132, 30, 0.08));
+  border-left-color: var(--gold-2);
+  color: var(--gold-1);
+}
