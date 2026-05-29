@@ -4,5 +4,9 @@
 # frontmatter. Per-post overrides: set `cover = "/images/foo.webp"` in
 # the post's frontmatter.
 #
-# Each entry can be a local path (served from /static/) or a full URL.
-- /images/default-cover.webp
+# Each entry can be a relative path (resolved via `relURL` in post.html —
+# so it correctly picks up the baseURL's path component on project pages
+# like `goldenforgery.github.io/website/`) or a full URL.
+# Do not start local paths with `/`; that bypasses relURL's path prefix
+# and would 404 under a path-rooted deploy.
+- images/default-cover.webp

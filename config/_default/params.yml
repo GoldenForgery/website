@@ -105,8 +105,9 @@ animation:
 # Preloading the banner here (as=image) tells the browser to fetch it
 # during head parsing, before it ever sees the <img> tag in the body —
 # stops the noticeable "blink in" on page navigation.
-injector:
-  head_end: |
-    <link rel="icon" type="image/svg+xml" href="/images/butterfly.svg">
-    <link rel="preload" as="image" href="/images/banner.webp" type="image/webp" fetchpriority="high">
-    <link rel="stylesheet" href="/css/custom.css">
+# Project asset links (custom.css, SVG favicon, banner preload) used to
+# live here under injector.head_end. They moved to the forked
+# layouts/partials/head.html so the paths can use Hugo's relURL helper
+# and adapt between `hugo server` (root path) and the GitHub Pages
+# project deploy (/website/ path). Don't re-add them via the injector
+# unless you also re-hardcode the deploy path.
