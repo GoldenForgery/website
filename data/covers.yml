@@ -1,0 +1,8 @@
+# Project-level override of themes/reimu/data/covers.yml.
+# This list is the pool the theme draws from at random when a post on a
+# listing page (home, archives, category, tag) has no `cover` set in its
+# frontmatter. Per-post overrides: set `cover = "/images/foo.webp"` in
+# the post's frontmatter.
+#
+# Each entry can be a local path (served from /static/) or a full URL.
+- /images/default-cover.webp

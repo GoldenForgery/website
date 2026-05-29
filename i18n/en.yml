@@ -1,3 +1,4 @@
 # Project-level i18n overrides, merged into the theme's i18n/en.yml.
 # Add any custom menu names here so {{ i18n .name }} resolves to a label.
 install: Install
+discord: Discord

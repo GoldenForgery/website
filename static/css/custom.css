@@ -52,6 +52,14 @@ html[data-theme="dark"] {
   font-weight: 900;
 }
 
+/* FA Brand glyphs (like Discord, f392) only exist at font-weight 400 —
+ * they live in "Font Awesome 7 Brands" which has no Solid weight. Roll
+ * the weight back for menu entries that point at known brand URLs. */
+.sidebar-menu-link-wrap a[href*="discord.gg"] ~ .sidebar-menu-icon,
+.main-nav-link-wrap[href*="discord.gg"] .main-nav-icon {
+  font-weight: 400;
+}
+
 /* Subtle gold tint on hover for menu icons, replacing the pure-red
  * hover of the upstream theme. */
 .sidebar-menu-link-wrap:hover .sidebar-menu-icon,

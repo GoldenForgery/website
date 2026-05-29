@@ -16,7 +16,9 @@ mainSections: ["posts"]
 # static/css/custom.css so any FA Solid glyph works here.
 #   f52d = feather  (quill — Umineko's red/blue text)
 #   f518 = book-open (the witches' game text)
-#   f70e = scroll   (records / archives)
+#   f392 = discord  (FA Brands — only exists at font-weight 400, so the
+#                    icon's font-weight is overridden in static/css/custom.css
+#                    targeted by `a[href*="discord.gg"]`)
 menu:
   - name: home
     url: ""
@@ -24,9 +26,9 @@ menu:
   - name: install
     url: "install"
     icon: f518
-  - name: archives
-    url: "archives"
-    icon: f70e
+  - name: discord
+    url: "https://discord.gg/NSGHEymyjM"
+    icon: f392
 
 # Disable the iconfont.cn glyph set the theme uses by default; we want
 # FontAwesome (which the theme loads alongside). MUST be the literal `false`

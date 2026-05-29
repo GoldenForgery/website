@@ -5,53 +5,33 @@ title = 'Install'
 description = 'How to install the Golden Forgery expansion for Umineko Golden Fantasia.'
 +++
 
-{{< alertBlockquote type="warning" >}}
-**Sample content — replace before launch.** The steps below are placeholders and almost certainly wrong; edit this page (`content/install.md`) with the real instructions.
-{{< /alertBlockquote >}}
-
 ## Requirements
 
 Before you start, make sure you have:
 
-- A legitimate copy of *Umineko Golden Fantasia* (version **X.Y.Z** or later).
-- **Windows 10 / 11** (other OSes may work via Wine — untested).
-- At least **TBD MB** of free disk space.
-- The latest **DirectX runtime** installed.
+- A copy of the Steam version of *Umineko Golden Fantasia*, which can be acquired on [Steam's website](https://store.steampowered.com/app/550340/Umineko_Golden_Fantasia/).
+- **Windows 10 / 11**. Linux is also compatible via Proton, but only Proton 9 has shown to be stable.
 
 ## Download
 
 Grab the latest release of Golden Forgery from the releases page:
 
-- **[Download Golden Forgery vX.Y.Z](#)** *(replace with the real link)*
-- Mirror: **[GitHub Releases](#)** *(optional)*
-
-Verify the download against the checksum on the releases page before continuing.
+- **[Download golden-forgery-vX.X.X.zip](https://github.com/GoldenForgery/files/releases/latest)**
 
 ## Install steps
 
-1. **Back up your game folder.** Copy your `Umineko Golden Fantasia/` directory somewhere safe so you can roll back if anything goes wrong.
-2. **Extract the archive.** Unzip `golden-forgery-X.Y.Z.zip` into a temporary folder.
-3. **Copy files into the game directory.** Move the contents of the extracted `data/` folder into your `Umineko Golden Fantasia/` install directory, overwriting when prompted.
-4. **Run the patcher** (if included). Double-click `forgery-patch.exe` and follow the prompts.
-5. **Launch the game** as you normally would. You should see the *Golden Forgery* logo on the title screen.
+1. **Extract the archive.** Unzip `golden-forgery-X.Y.Z.zip` into a temporary folder.
+2. **Copy files into the game directory.** Move the contents of the extracted folder into your `Umineko Golden Fantasia/` install directory, overwriting when prompted.
+3. **Launch the game** on Steam!
 
 ## Verifying the install
 
-If everything worked, the title screen will show "**Golden Forgery vX.Y.Z**" in the corner. New characters and stages will appear in their respective select screens.
+If everything worked, the title screen will show the Golden Forgery logo in the main menu. You should also see the new character palettes on the character select screen.
 
 ## Troubleshooting
 
-**The game crashes on launch.**
-TBD — usually a missing dependency or a leftover file from a previous mod. Try a clean install over a vanilla copy of the game.
-
-**My save files are gone.**
-Saves live in `%APPDATA%/UminekoGoldenFantasia/` and are not touched by the install — restart the game once and they should reappear. If they don't, restore from the backup you made in step 1.
-
-**Multiplayer doesn't match.**
-Both players must be on the exact same Golden Forgery version. Check the version string on the title screen.
-
-For anything else, see the **[News](/)** page for the latest known issues, or reach out via *(insert your support channel here — Discord, issue tracker, etc.)*.
+See the **[News](/)** page for the latest known issues, or reach out via [Discord](https://discord.gg/NSGHEymyjM).
 
 ## Uninstall
 
-To go back to vanilla, delete your modded `Umineko Golden Fantasia/` directory and restore the backup you made in step 1. Saves are preserved.
+To go back to vanilla, delete the `MOD` directory, the `Ougon.exe` and `Ougon.dll` files in the game's directory, then verify your install on Steam. Alternatively, you can also reinstall the game from Steam.
