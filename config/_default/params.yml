@@ -99,6 +99,16 @@ reimu_cursor:
 animation:
   enable: false
 
+# Enable pjax — the theme's SPA-style navigation. Every page swap stays
+# in the same document instead of doing a full reload; only the elements
+# in pjax.ts's `selectors:` list (header img/title, #main, #content,
+# sidebar, etc.) get replaced. Eliminates the "full repaint" flash
+# between pages, at the cost of one extra CDN dep (~30 KB gz). If any
+# post-body contains an inline <script>, add a `data-pjax` attribute to
+# it so it re-runs after navigation.
+pjax:
+  enable: true
+
 # Load our project-level stylesheet + SVG favicon via the theme's head
 # injector. head_end runs at the end of <head>, AFTER the theme's main.css,
 # so our rules win the cascade.
