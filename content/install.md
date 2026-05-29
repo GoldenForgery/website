@@ -20,9 +20,11 @@ Grab the latest release of Golden Forgery from the releases page:
 
 ## Install steps
 
-1. **Extract the archive.** Unzip `golden-forgery-X.Y.Z.zip` into a temporary folder.
-2. **Copy files into the game directory.** Move the contents of the extracted folder into your `Umineko Golden Fantasia/` install directory, overwriting when prompted.
-3. **Launch the game** on Steam!
+1. Switch to the **community** branch on Steam by right-clicking the game and clicking Properties -> Betas -> Community.
+2. Wait for the game to be ready to launch.
+3. **Extract the archive.** Unzip `golden-forgery-X.Y.Z.zip` into a temporary folder.
+4. **Copy files into the game directory.** Move the contents of the extracted folder into your `Umineko Golden Fantasia/` install directory, overwriting when prompted.
+5. **Launch the game** on Steam!
 
 ## Verifying the install
 
