@@ -56,6 +56,7 @@ I cannot express enough gratitude to everyone who kept playing *Umineko Golden F
 - **Sky Leite**: programming, witch of forgeries
 - **Zanaylo**: scripting, game design
 - **Zari0t**: game design
+- **Oblivious**: design
 
 ### Playtesters
 
