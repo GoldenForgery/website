@@ -1,0 +1,107 @@
++++
+date = '2026-06-28'
+draft = false
+title = 'Golden Forgery v0.5.2'
+description = "Bug fixes and reworks!"
+categories = ["news"]
+tags = ["release", "announcement", "patch"]
+cover_position = "top"
++++
+
+## Bug fixes, balance and reworks!
+It's been a month since release, I hope it's been fun!
+
+Today we have a patch that contains some bug fixes, some balance changes as well as some minor to major reworks. Feedback will be appreciated as some things are still a work in progress but we wanted to get it out to everyone early.
+
+Some keynotes:
+
+**Black Battler**'s 236X was reworked into a move where he summons other characters to attack for him. The SP version is incomplete and not in this release, sorry! But we will get it out soon.
+
+**Lambdadelta**: This is a more major rework as we were not satisfied with her kit and it didn't quite come together in the end, so we decided to rework her from scratch. The changelist linked will contain her new kit as it would be too much to put into the patch notes. **[Link to changelist](https://docs.google.com/spreadsheets/d/1dLwpJxm1SQdyu8RotFIgEgTyQniGGXm0HcIo6T5Y630/edit?gid=1351958959)**
+
+Head to the [**Install**](/install/) page for the download to the patch. Notes below.
+
+## Patch notes
+
+v0.5.2 Patch Notes
+
+**Ange**:
+- Fixed an issue with SP2 being unblockable
+
+**Beatrice**:
+- Tower summoning startup decreased
+- Tower air attack startup decreased
+- Uncharged 6B is no longer special cancellable, launches on hit
+- 6[B] is special cancellable, faster, doesn't launch but has higher hitstun
+- Fixed an issue with Metasuper being interruptable mid animation
+- Fixed inconsistent damage on SP2
+- Made Metasuper more consistent to hit on smaller characters in the corner
+- Fixed issue with Metasuper being burstable
+
+**Black Battler**:
+- Increased timestop on both 623SP versions
+- Replaced 236 series with a work in progress; Black Battler summons other characters doing attacks for him:
+  - 236A summons Erika who then does Erikopter
+  - 236B summons Ronove who then does Roses
+  - 236C summons Kanon who then does a dash slash
+  * 236SP unfinished, will come at a later date, sorry!
+
+**Chiester 410**:
+- Made hurtboxes more consistent on air hitstun animations
+- j.8B active frames and damage increased slightly
+- 624 reverted to low startup, one arrow, but each variation has different homing timings
+- 623A/B/C now are different variations:
+  - A is the usual
+  - B makes Chiester jump upwards
+  - C is similar to A but has no hitbox during jump, goes through the opponent and does a crossup kick upon landing. Has different recovery on hit vs on block
+- 623SP can combo from 2C
+
+**Dlanor**:
+- Fixed an issue causing Metasuper to knockback too low
+
+**Eva**:
+- Fixed an issue allowing Eva to SP2 while SP2 is already out
+- Adjusted hitbox on final 214C rekka overhead so that it connects up close, preventing whiffing in the corner
+- Some fixes to make SP2 less buggy in general
+
+**George**:
+- Reduced hitbox width on 236C
+- 214X startup decreased
+
+**Jessica**:
+- Damage increased for 5C, f.5C, 5B and f.5B
+- 426B damage increased, enchant version guard frames increased from 9f > 30f to cover the entire dash
+- 426A damage and guard damage increased
+- 236A/B/C damage increased for all variations
+- 236C now puts the opponent into juggle state
+- You can attack touch after 236C
+- 6[B] was removed as it didn't fit with the vision for her kit
+- 2C recovery decreased by 1f
+- 22X projectile invulnerability added again
+
+**Lambdadelta**:
+- Completely reworked, because we weren't satisfied with her first design.
+- New stuff in the changelist spreadsheet
+**[Link to changelist](https://docs.google.com/spreadsheets/d/1dLwpJxm1SQdyu8RotFIgEgTyQniGGXm0HcIo6T5Y630/edit?gid=1351958959)**
+
+**Lucifer**:
+- c.5B recovery increased, now roughly -4f on block
+- 2C no longer special cancellable
+- j.8B blockstun/hitstun lowered back to vanilla values
+- Fixed an issue with 6B jump height not working properly which made it safer on block
+- Fixed an issue with Stake Summon causing the opponent to block inconsistently
+
+**Ronove**:
+- Added invincibility until first active frame on normal guard-kick
+
+**Shannon**:
+- Reduced hitstun on air C moves
+- Added 1f of recovery to 3c to prevent 3C > f.5C links
+
+**Willard**:
+- 214 series reworked into a multi-tier charge move:
+  - No charge are quick slashes with low reward, techable
+  - Mid charge is stronger, untechable
+  - Max charge stores a stronger slash that you can do later by inputting 214X again
+- 236A/B/C can be cancelled into 6C
+- 623A/B/C no longer send into juggle state
