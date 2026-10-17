@@ -16,7 +16,7 @@ Before you start, make sure you have:
 
 Grab the latest release of Golden Forgery from the releases page:
 
-- **[Download golden-forgery-v0.5.5.zip](https://github.com/GoldenForgery/files/releases/latest)**
+- **[Download golden-forgery-v0.5.6.zip](https://github.com/GoldenForgery/files/releases/latest)**
 
 ## Install steps
 
